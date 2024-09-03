@@ -70,6 +70,9 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#reserve">Reservation</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#faq">FAQ</a>
             </li>
           </ul>
@@ -85,26 +88,22 @@
           Enjoy thrilling adventures and relax with a cup of coffee with the
           best view!
         </p>
-        <a href="#contact" class="btn btn-primary btn-lg">Book Now</a>
+        <a href="#reserve" class="btn btn-primary btn-lg">Book Now</a>
       </div>
     </section>
 
     <!-- Typography Section -->
     <div class="container typography-section" data-aos="fade-right">
-      <!-- Display Headline -->
       <h1 class="display-4 typography-title text-center">
         Discover the Beauty of Nature
       </h1>
 
-      <!-- Subtitle with Lead Class -->
       <p class="lead lead-text text-center">
         Explore the wonders of the world and create unforgettable memories.
       </p>
 
-      <!-- Display Text with Custom Styles -->
       <h2 class="custom-display-4 text-center">Top Destinations</h2>
 
-      <!-- Quote Section -->
       <div class="text-center my-4">
         <p class="custom-quote mx-auto d-inline-block">
           "Travel is the only thing you buy that makes you richer."
@@ -113,20 +112,22 @@
 
       <!-- Paragraphs with Bootstrap Text Classes -->
       <div class="row mt-5">
-        <div class="col-md-6">
+        <div class="col-md-6 ps-4">
           <h4>Explore the Unknown</h4>
-          <p class="text-muted">
-            Step into the wild and discover new places you've never imagined.
-            The world is full of beautiful landscapes, diverse cultures, and
-            breathtaking experiences waiting to be explored.
+          <p class="text-muted" style="text-align: justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam
+            sapiente distinctio architecto ex excepturi facere aspernatur
+            ratione sunt? Magnam laborum voluptates quod non distinctio. Dolorum
+            eos quo officiis nobis numquam?
           </p>
         </div>
         <div class="col-md-6">
           <h4>Embrace the Adventure</h4>
-          <p class="text-muted">
-            Every journey is an opportunity to learn and grow. Let the
-            adventures fill your soul with joy, excitement, and a sense of
-            fulfillment. Explore the unknown and create stories worth sharing.
+          <p class="text-muted" style="text-align: justify">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro
+            dolorem, fugit quas mollitia est unde excepturi praesentium error
+            quisquam quos reprehenderit sunt placeat, exercitationem voluptas
+            facere repellendus ullam quae natus.
           </p>
         </div>
       </div>
@@ -246,7 +247,6 @@
             />
           </div>
         </div>
-
         <!-- Gallery Item 2 -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
           <div class="card gallery-card shadow-sm border-0">
@@ -259,7 +259,6 @@
             />
           </div>
         </div>
-
         <!-- Gallery Item 3 -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
           <div class="card gallery-card shadow-sm border-0">
@@ -272,7 +271,6 @@
             />
           </div>
         </div>
-
         <!-- Gallery Item 4 -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
           <div class="card gallery-card shadow-sm border-0">
@@ -285,7 +283,6 @@
             />
           </div>
         </div>
-
         <!-- Gallery Item 5 -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
           <div class="card gallery-card shadow-sm border-0">
@@ -298,7 +295,6 @@
             />
           </div>
         </div>
-
         <!-- Gallery Item 6 -->
         <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
           <div class="card gallery-card shadow-sm border-0">
@@ -311,12 +307,11 @@
             />
           </div>
         </div>
-
         <!-- Tambahkan lebih banyak item galeri di sini -->
       </div>
     </div>
 
-    <!-- Virtual Tour Section -->
+    <!-- VIRTUAL TOUR SECTION -->
     <section id="virtual-tour" class="py-5 bg-light text-center">
       <div class="container" data-aos="fade-up">
         <h2 class="text-dark mb-4">Experience Our 360° Virtual Tour</h2>
@@ -331,21 +326,7 @@
       </div>
     </section>
 
-    <!-- Optional: Marzipano or Pannellum Integration -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"
-      rel="stylesheet"
-    />
-    <script>
-      pannellum.viewer("panorama", {
-        type: "equirectangular",
-        panorama: "https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?q=80&w=1912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with your panorama image URL
-        autoLoad: true,
-      });
-    </script>
-
-    <!-- Special Offers Section -->
+    <!-- SPECIAL OFFER SECTION -->
     <section id="offers" class="py-5">
       <div class="container">
         <h2 class="text-center mb-5">Special Offers</h2>
@@ -505,7 +486,7 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
       <div class="container" data-aos="fade-right">
-        <h2>Our Conatct</h2>
+        <h2>Our Contact</h2>
         <div class="row">
           <div class="col-md-6">
             <form id="contactForm">
@@ -564,6 +545,64 @@
     </section>
 
     <!-- Reservation Section -->
+    <div class="container" id="reserve">
+      <div class="reservation-form">
+        <h2 class="text-center mb-4">Formulir Reservasi</h2>
+        <form id="reservationForm">
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Masukkan nama Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Nomor Telepon</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              placeholder="Masukkan nomor telepon Anda"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="date">Tanggal Reservasi</label>
+            <input type="date" class="form-control" id="date" required />
+          </div>
+          <div class="form-group">
+            <label for="activity">Jenis Wisata</label>
+            <select class="form-control" id="activity" required>
+              <option value="coffee">Coffee</option>
+              <option value="camping">Camping</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="notes">Catatan Tambahan</label>
+            <textarea
+              class="form-control"
+              id="notes"
+              rows="3"
+              placeholder="Masukkan catatan tambahan"
+            ></textarea>
+          </div>
+          <!-- Tombol Submit dan Reset berdampingan -->
+          <div class="d-flex gap-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="submitReservation()"
+            >
+              Submit
+            </button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- FAQ SECTION -->
     <section id="faq" class="faq-section py-5">
@@ -599,6 +638,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css"
+      rel="stylesheet"
+    />
+    <script>
+      pannellum.viewer("panorama", {
+        type: "equirectangular",
+        panorama:
+          "https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?q=80&w=1912&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Replace with your panorama image URL
+        autoLoad: true,
+      });
+    </script>
     <script>
       AOS.init();
       // Navbar Scroll Effect
