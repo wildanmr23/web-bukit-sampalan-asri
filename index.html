@@ -550,7 +550,7 @@
         <h2 class="text-center mb-4">Formulir Reservasi</h2>
         <form id="reservationForm">
           <div class="form-group">
-            <label for="name">Nama Lengkap</label>
+            <label for="name">Nama Lengkap<span style="color: red;">*</span></label>
             <input
               type="text"
               class="form-control"
@@ -560,7 +560,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="phone">Nomor Telepon</label>
+            <label for="phone">Nomor Telepon<span style="color: red;">*</span></label>
             <input
               type="tel"
               class="form-control"
@@ -570,11 +570,11 @@
             />
           </div>
           <div class="form-group">
-            <label for="date">Tanggal Reservasi</label>
+            <label for="date">Tanggal Reservasi<span style="color: red;">*</span></label>
             <input type="date" class="form-control" id="date" required />
           </div>
           <div class="form-group">
-            <label for="activity">Jenis Wisata</label>
+            <label for="activity">Jenis Wisata<span style="color: red;">*</span></label>
             <select class="form-control" id="activity" required>
               <option value="coffee">Coffee</option>
               <option value="camping">Camping</option>
