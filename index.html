@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure & Coffee Lounge</title>
+
+    <!-- CSS STYLE -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand ps-3" href="#">Adventure & Coffee Lounge</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto ps-3">
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#carouselExampleCaptions">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#virtual-tour">360° View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#offers">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container text-center">
+        <h1 class="display-4">Welcome to Adventure & Coffee Lounge</h1>
+        <p class="lead">
+          Enjoy thrilling adventures and relax with a cup of coffee with the
+          best view!
+        </p>
+        <a href="#reservation" class="btn btn-primary btn-lg">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Typography Section -->
+    <div class="container typography-section" data-aos="fade-right">
+      <!-- Display Headline -->
+      <h1 class="display-4 typography-title text-center">
+        Discover the Beauty of Nature
+      </h1>
+
+      <!-- Subtitle with Lead Class -->
+      <p class="lead lead-text text-center">
+        Explore the wonders of the world and create unforgettable memories.
+      </p>
+
+      <!-- Display Text with Custom Styles -->
+      <h2 class="custom-display-4 text-center">Top Destinations</h2>
+
+      <!-- Quote Section -->
+      <div class="text-center my-4">
+        <p class="custom-quote mx-auto d-inline-block">
+          "Travel is the only thing you buy that makes you richer."
+        </p>
+      </div>
+
+      <!-- Paragraphs with Bootstrap Text Classes -->
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <h4>Explore the Unknown</h4>
+          <p class="text-muted">
+            Step into the wild and discover new places you've never imagined.
+            The world is full of beautiful landscapes, diverse cultures, and
+            breathtaking experiences waiting to be explored.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h4>Embrace the Adventure</h4>
+          <p class="text-muted">
+            Every journey is an opportunity to learn and grow. Let the
+            adventures fill your soul with joy, excitement, and a sense of
+            fulfillment. Explore the unknown and create stories worth sharing.
+          </p>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide pe-3 ps-3 pt-2"
+        data-aos="fade-up"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner py-5">
+          <!-- Carousel Item 1 -->
+          <div class="carousel-item active" id="carousel">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://images.unsplash.com/photo-1475483768296-6163e08872a1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://images.unsplash.com/photo-1445888985293-8e1b904061c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Item 2 -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1670002216960-23193b9ebf96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  src="https://images.unsplash.com/photo-1488667499475-42a530fab02b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Our Gallery</h2>
+      <div class="row">
+        <!-- Gallery Item 1 -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
+          <div class="card gallery-card shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top gallery-img"
+              alt="Gallery Image 1"
+              data-toggle="modal"
+              data-target="#galleryModal1"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
+          <div class="card gallery-card shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1542202229-7d93c33f5d07?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top gallery-img"
+              alt="Gallery Image 2"
+              data-toggle="modal"
+              data-target="#galleryModal2"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
+          <div class="card gallery-card shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1707567174199-2ac5cd3c0681?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top gallery-img"
+              alt="Gallery Image 3"
+              data-toggle="modal"
+              data-target="#galleryModal3"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
+          <div class="card gallery-card shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1707567174199-2ac5cd3c0681?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top gallery-img"
+              alt="Gallery Image 3"
+              data-toggle="modal"
+              data-target="#galleryModal3"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
+          <div class="card gallery-card shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1542202229-7d93c33f5d07?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top gallery-img"
+              alt="Gallery Image 2"
+              data-toggle="modal"
+              data-target="#galleryModal2"
+            />
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-right">
+          <div class="card gallery-card shadow-sm border-0">
+            <img
+              src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="card-img-top gallery-img"
+              alt="Gallery Image 1"
+              data-toggle="modal"
+              data-target="#galleryModal1"
+            />
+          </div>
+        </div>
+
+        <!-- Tambahkan lebih banyak item galeri di sini -->
+      </div>
+    </div>
+
+    <!-- Virtual Tour Section -->
+    <section
+      id="virtual-tour"
+      class="py-5 bg-light parallax"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      "
+    >
+      <div class="container text-center text-white" data-aos="fade-up">
+        <h2>Experience Our 360° Virtual Tour</h2>
+        <p class="lead">
+          Take a virtual walk around our place and discover the breathtaking
+          views.
+        </p>
+        <div id="panorama" style="width: 100%; height: 500px"></div>
+        <a href="#reservation" class="btn btn-outline-light btn-lg mt-4"
+          >Start Virtual Tour</a
+        >
+      </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section id="offers" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Special Offers</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                height="250px"
+                src="https://plus.unsplash.com/premium_photo-1669374537810-f88d8ad82818?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top"
+                alt="Offer 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Coffee Lovers' Delight</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sequi optio odit officiis asperiores error quis vitae
+                  necessitatibus ipsum dicta repudiandae.
+                </p>
+                <button type="button" class="btn btn-outline-primary">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                height="250px"
+                src="https://images.unsplash.com/photo-1525811902-f2342640856e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top"
+                alt="Offer 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Camping Package</h5>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
+                  voluptatem corporis ducimus consectetur fugit reiciendis
+                  perspiciatis architecto dolores.
+                </p>
+                <button type="button" class="btn btn-outline-primary">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img
+                height="250px"
+                src="https://plus.unsplash.com/premium_photo-1670601440146-3b33dfcd7e17?q=80&w=1876&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="card-img-top"
+                alt="Offer 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Various Food Variants</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Reprehenderit corporis tenetur non molestiae ab sit dicta eius
+                  nemo molestias asperiores!
+                </p>
+                <button type="button" class="btn btn-outline-primary">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="testimonials-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Apa Kata Pelanggan Kami</h2>
+        <div
+          id="testimonialsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="text-center">
+                <img
+                  src="assets/person.jpg"
+                  class="rounded-circle mb-3"
+                  alt="Customer 1"
+                  style="width: 80px; height: 80px; object-fit: cover"
+                />
+                <div class="testimonial-text">
+                  <p class="mb-1">
+                    "The product quality is exceptional and the service was
+                    great. I highly recommend it!"
+                  </p>
+                  <p class="mb-0"><strong>Jane Doe</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="text-center">
+                <img
+                  src="assets/person.jpg"
+                  class="rounded-circle mb-3"
+                  alt="Customer 2"
+                  style="width: 80px; height: 80px; object-fit: cover"
+                />
+                <div class="testimonial-text">
+                  <p class="mb-1">
+                    "Amazing experience, the product exceeded my expectations
+                    and the customer support was fantastic!"
+                  </p>
+                  <p class="mb-0"><strong>John Smith</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="text-center">
+                <img
+                  src="assets/person.jpg"
+                  class="rounded-circle mb-3"
+                  alt="Customer 3"
+                  style="width: 80px; height: 80px; object-fit: cover"
+                />
+                <div class="testimonial-text">
+                  <p class="mb-1">
+                    "The best purchase I've made this year. The quality is
+                    top-notch and the delivery was on time."
+                  </p>
+                  <p class="mb-0"><strong>Emily Johnson</strong></p>
+                </div>
+              </div>
+            </div>
+            <!-- Add more carousel-items here as needed -->
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#testimonialsCarousel"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#testimonialsCarousel"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container" data-aos="fade-right">
+        <h2>Our Conatct</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="name" class="form-label"><b>NAMA</b></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Masukan Nama"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label"><b>EMAIL</b></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Masukan Email"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label"><b>PESAN</b></label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Masukan Pesan"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">KIRIM PESAN</button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-info mt-2">
+              <h4>KONTAK INFORMASI</h4>
+              <p>
+                <i class="bi bi-geo-alt-fill"></i> 123 Street, City, Country
+              </p>
+              <p><i class="bi bi-envelope-fill"></i> info@example.com</p>
+              <p><i class="bi bi-phone-fill"></i> +123 456 7890</p>
+              <p><i class="bi bi-clock-fill"></i> Mon - Fri, 9:00 - 17:00</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-container" data-aos="slide-up">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3956.8470044031274!2d108.21327097500088!3d-7.371039592638283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMjInMTUuNyJTIDEwOMKwMTInNTcuMSJF!5e0!3m2!1sid!2sid!4v1724891408215!5m2!1sid!2sid"
+            frameborder="0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservation Section -->
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faq-section py-5">
+      <div class="container" data-aos="zoom-in">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ will be inject here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>&copy; 2024 Adventure & Coffee Lounge. All Rights Reserved.</p>
+        <p>Follow us on:</p>
+        <div>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="javascript/faq.js"></script>
+    <script src="javascript/reserve.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      // Navbar Scroll Effect
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $(".navbar").addClass("scrolled");
+        } else {
+          $(".navbar").removeClass("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
