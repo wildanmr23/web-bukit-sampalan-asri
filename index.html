@@ -544,7 +544,7 @@
       </div>
     </section>
 
-    <!-- Reservation Section -->
+    <!-- RESERVATION SECTION -->
     <div class="container" id="reserve">
       <div class="reservation-form">
         <h2 class="text-center mb-4">Formulir Reservasi</h2>
@@ -556,7 +556,7 @@
             <input
               type="text"
               class="form-control"
-              id="name"
+              id="nama"
               placeholder="Masukkan nama Anda"
               required
             />
@@ -625,16 +625,29 @@
                 id="camping"
                 onchange="updateCost()"
               />
-              <label class="form-check-label" for="camping"
-                >Camping - Rp 150.000</label
-              >
+              <label class="form-check-label" for="camping">Camping</label>
             </div>
             <div
               class="form-group"
-              id="campingCapacityGroup"
+              id="campingOptionsGroup"
               style="display: none"
             >
-              <label for="campingCapacity"
+              <label for="campingPackage"
+                >Pilih Paket Camping<span style="color: red">*</span></label
+              >
+              <select
+                class="form-control"
+                id="campingPackage"
+                onchange="updateCost()"
+              >
+                <option value="">Pilih Paket</option>
+                <option value="300000,Paket 4">Paket 4 Orang - Rp 300.000</option>
+                <option value="500000,Paket 6">Paket 6 Orang - Rp 500.000</option>
+              </select>
+              <label
+                for="campingPersons"
+                id="campingPersonsLabel"
+                style="display: none"
                 >Jumlah Orang untuk Camping<span style="color: red"
                   >*</span
                 ></label
@@ -642,12 +655,31 @@
               <input
                 type="number"
                 class="form-control"
-                id="campingCapacity"
+                id="campingPersons"
                 placeholder="Masukkan jumlah orang untuk Camping"
                 min="1"
+                style="display: none"
                 onchange="updateCost()"
               />
             </div>
+          </div>
+          <div class="form-group">
+            <label>Total Biaya:</label>
+            <p id="costDisplay" class="font-weight-bold">Rp 0</p>
+            <label>Keterangan Uang Muka (50%):</label>
+            <p id="downPaymentDisplay" class="font-weight-bold">Rp 0</p>
+          </div>
+          <div class="form-group">
+            <label for="paymentMethod"
+              >Metode Pembayaran<span style="color: red">*</span></label
+            >
+            <select class="form-control" id="paymentMethod" required>
+              <option value="">Pilih Metode Pembayaran</option>
+              <option value="transfer">Transfer Bank</option>
+              <option value="dana">Dana</option>
+              <option value="gopay">Gopay</option>
+              <option value="shopeepay">ShopeePay</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="notes">Catatan Tambahan</label>
@@ -657,11 +689,6 @@
               rows="3"
               placeholder="Masukkan catatan tambahan"
             ></textarea>
-          </div>
-          <!-- Elemen untuk menampilkan biaya -->
-          <div class="form-group">
-            <label>Total Biaya:</label>
-            <p id="costDisplay" class="font-weight-bold">Rp 0</p>
           </div>
           <!-- Tombol Submit dan Reset berdampingan -->
           <div class="d-flex gap-2">

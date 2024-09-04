@@ -1,112 +1,118 @@
 function updateCost() {
-  // Ambil nilai dari input
   var coffeeChecked = document.getElementById("coffee").checked;
   var campingChecked = document.getElementById("camping").checked;
 
-  // Menampilkan atau menyembunyikan input kapasitas berdasarkan jenis wisata yang dipilih
-  document.getElementById("coffeeCapacityGroup").style.display = coffeeChecked
-    ? "block"
-    : "none";
-  document.getElementById("campingCapacityGroup").style.display = campingChecked
-    ? "block"
-    : "none";
+  // Menampilkan atau menyembunyikan input kapasitas dan opsi paket camping
+  document.getElementById("coffeeCapacityGroup").style.display = coffeeChecked ? "block" : "none";
+  var campingOptionsGroup = document.getElementById("campingOptionsGroup");
+  var campingPackage = document.getElementById("campingPackage");
+
+  if (campingChecked) {
+      campingOptionsGroup.style.display = "block";
+  } else {
+      campingOptionsGroup.style.display = "none";
+  }
 
   // Mengambil kapasitas
-  var coffeeCapacity =
-    parseInt(document.getElementById("coffeeCapacity").value) || 0;
-  var campingCapacity =
-    parseInt(document.getElementById("campingCapacity").value) || 0;
-
-  // Menentukan biaya per orang
-  var costPerPerson = 0;
-  if (coffeeChecked) {
-    costPerPerson += 50000;
-  }
-  if (campingChecked) {
-    costPerPerson += 150000;
-  }
+  var coffeeCapacity = parseInt(document.getElementById("coffeeCapacity").value) || 0;
+  var campingPackageValue = campingPackage.value.split(",");
+  var campingCost = parseInt(campingPackageValue[0]) || 0;
 
   // Menghitung total biaya
-  var totalCost = coffeeCapacity * 50000 + campingCapacity * 150000;
+  var totalCost = 0;
+  if (coffeeChecked) {
+      totalCost += coffeeCapacity * 50000;
+  }
+  if (campingChecked && campingCost > 0) {
+      totalCost += campingCost;
+  }
+
+  // Menghitung uang muka
+  var downPayment = totalCost * 0.5;
 
   // Menampilkan biaya
-  document.getElementById("costDisplay").innerText =
-    "Rp " + totalCost.toLocaleString();
+  document.getElementById("costDisplay").innerText = "Rp " + totalCost.toLocaleString();
+  document.getElementById("downPaymentDisplay").innerText = "Rp " + downPayment.toLocaleString();
+}
+
+function formatDate(dateString) {
+  var options = { day: 'numeric', month: 'long', year: 'numeric' };
+  var date = new Date(dateString);
+  return date.toLocaleDateString('id-ID', options);
 }
 
 function submitReservation() {
-  // Ambil nilai dari input
-  var name = document.getElementById("name").value;
+  var name = document.getElementById("nama").value;
   var phone = document.getElementById("phone").value;
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
   var coffeeCapacity = document.getElementById("coffeeCapacity").value;
-  var campingCapacity = document.getElementById("campingCapacity").value;
+  var campingPackageValue = document.getElementById("campingPackage").value.split(",");
+  var campingCost = parseInt(campingPackageValue[0]) || 0;
   var notes = document.getElementById("notes").value;
+  var paymentMethod = document.getElementById("paymentMethod").value;
 
   // Menyimpan pesan error
   var errors = [];
 
   // Validasi setiap field
   if (!name) {
-    errors.push("Nama lengkap");
+      errors.push("Nama lengkap");
   }
   if (!phone) {
-    errors.push("Nomor telepon");
+      errors.push("Nomor telepon");
   }
   if (!date) {
-    errors.push("Tanggal reservasi");
+      errors.push("Tanggal reservasi");
   }
   if (!time) {
-    errors.push("Waktu reservasi");
+      errors.push("Waktu reservasi");
   }
-  if (
-    (document.getElementById("coffee").checked && !coffeeCapacity) ||
-    (document.getElementById("camping").checked && !campingCapacity)
-  ) {
-    errors.push("Jumlah orang untuk jenis wisata yang dipilih");
+  if (document.getElementById("coffee").checked && !coffeeCapacity) {
+      errors.push("Jumlah orang untuk Coffee");
+  }
+  if (document.getElementById("camping").checked && !campingPackageValue[0]) {
+      errors.push("Paket Camping");
   }
 
   // Cek apakah ada jenis wisata yang dipilih
   var activities = [];
   if (document.getElementById("coffee").checked) {
-    activities.push(`Coffee (${coffeeCapacity} orang)`);
+      activities.push(`Coffee (${coffeeCapacity} orang)`);
   }
   if (document.getElementById("camping").checked) {
-    activities.push(`Camping (${campingCapacity} orang)`);
+      activities.push(`Camping (${campingPackageValue[1]} orang)`);
   }
   if (activities.length === 0) {
-    errors.push("Jenis wisata");
+      errors.push("Jenis wisata");
+  }
+
+  // Validasi metode pembayaran
+  if (!paymentMethod) {
+      errors.push("Metode pembayaran");
   }
 
   // Jika ada error, tampilkan alert dengan daftar error
   if (errors.length > 0) {
-    alert("Harap lengkapi bidang berikut: " + errors.join(", "));
-    return;
+      alert("Harap lengkapi bidang berikut: " + errors.join(", "));
+      return;
   }
 
   // Tentukan biaya berdasarkan jenis wisata dan jumlah orang
-  var costPerPerson = 0;
+  var totalCost = 0;
   if (document.getElementById("coffee").checked) {
-    costPerPerson += 50000;
+      totalCost += (parseInt(coffeeCapacity) || 0) * 50000;
   }
-  if (document.getElementById("camping").checked) {
-    costPerPerson += 150000;
+  if (document.getElementById("camping").checked && campingCost > 0) {
+      totalCost += campingCost;
   }
-  var totalCost =
-    (parseInt(coffeeCapacity) || 0) * 50000 +
-    (parseInt(campingCapacity) || 0) * 150000;
 
   // Buat pesan untuk WhatsApp
-  var message = `Halo, saya ${name} ingin melakukan reservasi untuk ${activities.join(
-    " dan "
-  )} pada tanggal ${date} pukul ${time}. No. telepon: ${phone}. Catatan tambahan: ${
-    notes ? notes : "Tidak ada catatan tambahan."
-  } Total biaya: Rp ${totalCost.toLocaleString()}`;
+  var formattedDate = formatDate(date);
+  var message = `Hallo, saya ${name} ingin melakukan reservasi untuk ${activities.join(", ")} pada tanggal ${formattedDate} pukul ${time}. No. telepon : ${phone}. Catatan tambahan : ${notes ? notes : "Tidak ada catatan tambahan."} Biaya total : Rp ${totalCost.toLocaleString()}. Uang muka (50%) : Rp ${totalCost * 0.5.toLocaleString()}. Saya akan membayar uang muka dengan metode : ${paymentMethod}, tolong berikan nomer tersebut untuk saya melakukan pembayaran. Terima Kasih!`;
 
   // Encode message to URL format
-  var whatsappURL =
-    "https://wa.me/+6282127312767?text=" + encodeURIComponent(message);
+  var whatsappURL = "https://wa.me/+6282127312767?text=" + encodeURIComponent(message);
 
   // Buka chat WhatsApp
   window.open(whatsappURL, "_blank");
