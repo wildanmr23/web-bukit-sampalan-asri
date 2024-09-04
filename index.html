@@ -604,11 +604,9 @@
               id="coffeeCapacityGroup"
               style="display: none"
             >
-              <label for="coffeeCapacity"
-                >Jumlah Orang untuk Coffee<span style="color: red"
-                  >*</span
-                ></label
-              >
+              <label for="coffeeCapacity">
+                Jumlah Orang untuk Coffee<span style="color: red">*</span>
+              </label>
               <input
                 type="number"
                 class="form-control"
@@ -616,6 +614,8 @@
                 placeholder="Masukkan jumlah orang untuk Coffee"
                 min="1"
                 onchange="updateCost()"
+                oninput="validateNumberInput(this)"
+                required
               />
             </div>
             <div class="form-check">
@@ -641,8 +641,12 @@
                 onchange="updateCost()"
               >
                 <option value="">Pilih Paket</option>
-                <option value="300000,Paket 4">Paket 4 Orang - Rp 300.000</option>
-                <option value="500000,Paket 6">Paket 6 Orang - Rp 500.000</option>
+                <option value="300000,Paket 4">
+                  Paket 4 Orang - Rp 300.000
+                </option>
+                <option value="500000,Paket 6">
+                  Paket 6 Orang - Rp 500.000
+                </option>
               </select>
               <label
                 for="campingPersons"
@@ -664,9 +668,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Total Biaya:</label>
+            <label>Total Biaya</label>
             <p id="costDisplay" class="font-weight-bold">Rp 0</p>
-            <label>Keterangan Uang Muka (50%):</label>
+            <label>Wajib Membayar Uang Muka Sebesar (50%)</label>
             <p id="downPaymentDisplay" class="font-weight-bold">Rp 0</p>
           </div>
           <div class="form-group">

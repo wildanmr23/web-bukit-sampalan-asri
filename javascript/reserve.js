@@ -41,6 +41,11 @@ function formatDate(dateString) {
   return date.toLocaleDateString('id-ID', options);
 }
 
+function validateNumberInput(input) {
+  // Remove any non-numeric characters
+  input.value = input.value.replace(/[^0-9]/g, '');
+}
+
 function submitReservation() {
   var name = document.getElementById("nama").value;
   var phone = document.getElementById("phone").value;
@@ -109,7 +114,8 @@ function submitReservation() {
 
   // Buat pesan untuk WhatsApp
   var formattedDate = formatDate(date);
-  var message = `Hallo, saya ${name} ingin melakukan reservasi untuk ${activities.join(", ")} pada tanggal ${formattedDate} pukul ${time}. No. telepon : ${phone}. Catatan tambahan : ${notes ? notes : "Tidak ada catatan tambahan."} Biaya total : Rp ${totalCost.toLocaleString()}. Uang muka (50%) : Rp ${totalCost * 0.5.toLocaleString()}. Saya akan membayar uang muka dengan metode : ${paymentMethod}, tolong berikan nomer tersebut untuk saya melakukan pembayaran. Terima Kasih!`;
+  var dp = totalCost * 0.5.toLocaleString();
+  var message = `Hallo, saya ${name} ingin melakukan reservasi untuk ${activities.join(", ")} pada tanggal ${formattedDate} pukul ${time}. No. telepon : ${phone}. Biaya total : Rp ${totalCost.toLocaleString()}. Uang muka (50%) : Rp ${dp.toLocaleString()}. Saya akan membayar uang muka dengan metode : ${paymentMethod}, tolong berikan nomer tersebut untuk saya melakukan pembayaran. Catatan tambahan : ${notes ? notes : "Tidak ada catatan tambahan."} Terima Kasih!`;
 
   // Encode message to URL format
   var whatsappURL = "https://wa.me/+6282127312767?text=" + encodeURIComponent(message);
