@@ -24,7 +24,7 @@ function updateCost() {
   // Menghitung total biaya
   var totalCost = 0;
   if (coffeeChecked) {
-    totalCost += coffeeCapacity * 50000;
+    totalCost += coffeeCapacity * 20000;
   }
   if (campingChecked && campingCost > 0) {
     totalCost += campingCost;
