@@ -154,3 +154,24 @@ footer {
   margin-bottom: 30px;
   font-weight: bold;
 }   
+
+.horizontal-scroll{
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-color: transparent transparent;
+}
+
+.horizontal-scroll::-webkit-scrollbar{
+  display: none;
+}
+
+.container-galery{
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+}
+
+.container-galery .item img {
+  max-width: 300px;
+}
+
