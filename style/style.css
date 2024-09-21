@@ -169,6 +169,7 @@ footer {
   display: flex;
   width: max-content;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .container-galery .item img {
